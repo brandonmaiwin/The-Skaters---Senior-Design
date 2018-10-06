@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,66 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bluetooth_connection_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqQ-NG-SA2">
+                                <rect key="frame" x="149" y="81" width="76" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="3ky-Tf-f1a"/>
+                                    <constraint firstAttribute="width" constant="76" id="EeN-PH-VaW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="56" id="rLt-Mg-XBd"/>
+                                    <constraint firstAttribute="height" constant="56" id="z1d-pv-nSc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="5ov-Nd-Hlt">
+                                <rect key="frame" x="60" y="145" width="254" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="275" id="9ON-Eh-mBQ"/>
+                                    <constraint firstAttribute="width" constant="275" id="JgF-Ro-EnH"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="275" id="NhE-zV-ToL"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="29" id="OD2-dN-khM"/>
+                                    <constraint firstAttribute="height" constant="29" id="OLx-gR-pw9"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="cOP-P5-6rm"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="speedslider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bj2-Zb-L8Z"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ov-Nd-Hlt" secondAttribute="trailing" constant="50" id="1r3-2e-dsc"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="3Fj-fu-WjA"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="top" secondItem="EqQ-NG-SA2" secondAttribute="bottom" constant="22" id="8ac-pV-ySL"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="top" secondItem="EqQ-NG-SA2" secondAttribute="bottom" constant="25" id="9Xf-od-ARb"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="top" secondItem="EqQ-NG-SA2" secondAttribute="bottom" constant="25" id="CLT-tq-ggX"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ea6-lK-vRK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EqQ-NG-SA2" secondAttribute="trailing" constant="150" id="Oeh-o1-tg5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ov-Nd-Hlt" secondAttribute="trailing" constant="50" id="QjA-6T-4HT"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="top" secondItem="EqQ-NG-SA2" secondAttribute="bottom" constant="25" id="Rlg-Qu-EGv"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="top" secondItem="EqQ-NG-SA2" secondAttribute="bottom" constant="25" id="XgT-QN-ubm"/>
+                            <constraint firstItem="EqQ-NG-SA2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="e9C-NE-dvr"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="geC-TC-OvP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5ov-Nd-Hlt" secondAttribute="trailing" constant="75" id="jTr-HL-bRF"/>
+                            <constraint firstItem="EqQ-NG-SA2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="149" id="ka6-P9-Ogi"/>
+                            <constraint firstItem="5ov-Nd-Hlt" firstAttribute="top" secondItem="EqQ-NG-SA2" secondAttribute="bottom" constant="25" id="oBg-Gi-qTS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5ov-Nd-Hlt" secondAttribute="bottom" constant="476" id="pnw-Pu-D1p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="speedometer" destination="EqQ-NG-SA2" id="OCM-sO-2su"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
